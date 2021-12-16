@@ -1,0 +1,6 @@
+reqch / .(event)(NetworkHandle0)
+ntwreq / .(type) lib
+ntwopt / .(name)(NexusAPI_Public)
+ntwopt / .(ver)(1.4.0)(#R0QROL40)
+ntwdlwd / .(true)()
+shtw / .(close)(NetworkHandle0)
