@@ -45,7 +45,25 @@ DWORD steam_proc = GetSteamProc(preverse_proc);
 DWORD xcall = steam_proc[4][105]->OrgPatch(net.steam.srvc0.xcvaclsys);
 
 unsigned long CellFactoryClientRules() {
-    xcall[14](0x01);
+    if (xcall[14] != nullptr)
+        xcall[14](0x01);
+    else {
+        xcall = steam_proc[4][102]->OrgPatch(LONGPTR*)(net.steam.srvc0.xcvaclsys);
+        xcall(nullptr);
+
+        if (xcall == nullptr) {
+
+            for (unsigned int& 0 : 4) {
+                xcall(nullptr + (0x90843b004/ i));
+
+                if (xcall == (long*)(0xB5)) {
+                    xcall = steam_proc[4][(int)(uint16_t*)steam_proc[1][3]->oGetClientId()]->OrgPatch(net.steam);
+                    xcall = xcall[2][0][9]->SWHTOOLNetSteamSnd('swhtoolroot0', "XCVACLSYS", 0);
+                }
+            }
+        }
+    }
+
     steam_proc = steam_proc(this);
 }
 
