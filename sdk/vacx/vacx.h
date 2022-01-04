@@ -5,8 +5,9 @@ namespace vacx {
     double __cdecl CreateVHookAddress(int* index);
     void __cdecl VHookByIntefaceHandler(unsigned long data, void* arg2, void* arg3, uintptr_t& strcmp_addr);
     void __stdcall PrehookedAttributive(uintptr_t strcmp_addr);
-    VACX void* __cdecl EVENTAPI_VOL(VACX short LLA_FUNC, VACX short MNGR_STF);
     auto __stdcall CreateInterface_MVT(uint16_t& module, uint16_t& section);
+    
+    VACX void* __cdecl EVENTAPI_VOL(VACX short LLA_FUNC, VACX short MNGR_STF);
     VACX long* __cdecl EVENTAPI_FIND_CLASS(VACX uint obj, VACX float class_indef);
 
     public:
