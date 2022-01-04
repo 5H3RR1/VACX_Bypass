@@ -14,12 +14,12 @@ long double Patch(BYTE char* src) {
 
     static char256* dwthink = NexusAPI::HexialPush(NexusAPI::OverrideThink(0x0bf), strcmp(this*));
 
-    return NexusAPI::PerfectThink(dwthink, "85 C0 ? ? ? 00");
+    return NexusAPI::PerfectThink(dwthink, "85 B4 ? ? ? 03");
 }
 
 typedef class VACX {
     public:
-    short	incxpatch(char T* kvpatch);
+    double short	incxpatch(char T* kvpatch);
     int kvpatch& operator=(uint32_t T *kvpatch_try);
     kvpatch_try* operator->() uint32_t;
 };
